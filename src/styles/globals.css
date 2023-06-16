@@ -17,3 +17,16 @@
 }
 
 
+.btn {
+  @apply font-semibold py-2 px-4 rounded inline-block w-max
+}
+
+.btn-outline {
+  @apply border-2 border-teal-700
+}
+
+.btn-outline:hover {
+  @apply bg-teal-700
+}
+
+
