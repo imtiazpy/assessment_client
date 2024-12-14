@@ -1,0 +1,76 @@
+
+.inputBox {
+  position: relative;
+
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(31, 41, 55, 1);
+  border: 1px solid rgba(233, 186, 32, 0.25);
+  outline: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.inputField:-webkit-autofill,
+.inputField:-webkit-autofill:hover, 
+.inputField:-webkit-autofill:focus {
+  border: 1px solid rgba(233, 186, 32, 0.25);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(31, 41, 55, 1) inset;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.25);
+}
+
+
+.label {
+  position: absolute;
+  left: 0;
+  padding: 0.5rem;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+
+.inputField:not(:placeholder-shown) + .label{
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 0.5rem;
+  background-color: rgba(31, 41, 55, 1);
+  border-left: 1px solid #b30a0a;
+  border-right: 1px solid #b30a0a;
+  letter-spacing: 0.2em;
+}
+
+.inputField:not(:placeholder-shown) {
+  border: 1px solid #b30a0a;
+}
+
+
+
+.inputField:valid + .label, 
+.inputField:focus + .label {
+  color: #44f8da;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 0.5rem;
+  background-color: rgba(31, 41, 55, 1);
+  border-left: 1px solid #44f8da;
+  border-right: 1px solid #44f8da;
+  letter-spacing: 0.2em;
+}
+
+.inputField:valid, 
+.inputField:focus {
+  border: 1px solid #44f8da;
+}
+
+
+
+
+
+
+

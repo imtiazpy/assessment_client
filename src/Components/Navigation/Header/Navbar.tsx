@@ -1,10 +1,14 @@
 'use client';
 
+import useAuth from '@/hooks/useAuth';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(true)
+
+  const {state} = useAuth()
+
   return (
     <>
       <nav className="w-full bg-gray-800 shadow">
@@ -84,7 +88,13 @@ const Navbar = () => {
                 </ul>
 
                 <div>
-                  <button className='btn btn-outline'>Login</button>
+                  {
+                    !state.isAuthenticated && (
+                      <Link href="/login">
+                        <button className='btn btn-outline'>Login</button>
+                      </Link>
+                    )
+                  }
                 </div>
               </div>
             </div>
